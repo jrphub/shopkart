@@ -1,0 +1,26 @@
+[
+  {
+    "name": "one plus 9R",
+    "description": "one plus mobile under 40000 INR",
+    "category": "mobile",
+    "pincodes": [
+      "753009",
+      "400608"
+    ],
+    "stockCount": "10",
+    "price": "40000",
+    "ccyType": "INR"
+  },
+  {
+    "name": "samsung galaxy A71",
+    "description": "samsung mobile under 35000 INR",
+    "category": "mobile",
+    "pincodes": [
+      "753009",
+      "400601"
+    ],
+    "stockCount": "15",
+    "price": "32000",
+    "ccyType": "INR"
+  }
+]

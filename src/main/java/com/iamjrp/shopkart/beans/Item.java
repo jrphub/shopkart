@@ -1,4 +1,4 @@
-package com.iamjrp.shopkart.config;
+package com.iamjrp.shopkart.beans;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -22,4 +22,6 @@ public class Item {
 	private String category;
 	private Long stockCount;
 	private List<String> pincodes;
+	private Long price;
+	private String ccyType;
 }
