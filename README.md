@@ -1,3 +1,7 @@
+### Set up
+- Check maven (mvn) in your system class path
+- Check JDK17 in your system class path or intellij 
+
 ### Reference
 
 #### video

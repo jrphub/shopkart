@@ -54,4 +54,9 @@ public class ItemServiceImpl implements ItemService {
 		}
 		return itemDao.save(dbItem);
 	}
+
+	@Override
+	public void deleteItemById(Long id) {
+		itemDao.deleteById(id);
+	}
 }

@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: "Shopkart"
   datasource:
     url: jdbc:h2:mem:db_shopkart
     #url: jdbc:h2:file:/data/db_shopkart #for file storage
@@ -9,3 +11,41 @@ spring:
     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
   h2:
     console.enabled: true
+
+logging:
+  group:
+   tomcat: "org.apache.catalina,org.apache.coyote,org.apache.tomcat"
+  level: #trace, debug, info, warn, error, fatal (non-logback)
+    root: "info" #warn
+    org.springframework.web: "info" #debug
+    org.hibernate: "error"
+    tomcat: "info"
+
+
+
+#Testing properties injection
+company:
+  name: shopKart
+  locationList:
+    - Mumbai
+    - Bengaluru
+  teamMap:
+    "[ceo]" : "jrp"
+    "[coo]" : "jas"
+
+
+app:
+  page: "home"
+  env: "local"
+---
+#-Dspring.profiles.active=dev needs to be added
+spring:
+  config:
+    activate:
+      on-profile: "dev"
+app:
+  page: "home"
+  env: "dev"
+
+
+

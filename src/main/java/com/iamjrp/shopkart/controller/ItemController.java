@@ -2,6 +2,7 @@ package com.iamjrp.shopkart.controller;
 
 import com.iamjrp.shopkart.beans.Item;
 import com.iamjrp.shopkart.service.ItemService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/items")
+@Slf4j
 public class ItemController {
     @Autowired
     private ItemService itemService;
@@ -37,5 +39,11 @@ public class ItemController {
     public ResponseEntity<Item> updateItemById(@PathVariable("id") Long id, @RequestBody Item item) {
         Item updatedItem = itemService.updateItemById(id, item);
         return ResponseEntity.ok(updatedItem);
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteItemById(@PathVariable("id") Long id) {
+        itemService.deleteItemById(id);
+        return "Deletion of " + id + " is successful";
     }
 }

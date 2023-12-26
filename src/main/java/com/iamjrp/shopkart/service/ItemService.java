@@ -13,4 +13,6 @@ public interface ItemService {
 	Optional<Item> getItemById(Long id);
 
 	Item updateItemById(Long id, Item item);
+
+    void deleteItemById(Long id);
 }
